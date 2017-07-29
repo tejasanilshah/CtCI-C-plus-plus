@@ -15,13 +15,16 @@ You will simply initialize a boolean array of the same size and set the value to
 #include <algorithm>
 #include <string>
 using namespace std;
-bool findDuplicateBB(const string& input);
+//BB = Br
+bool findDuplicateBF(const string& input);
+bool findDuplicateASCII(const string& input);
 int main() {
     /* Enter your code here. Read input from STDIN. Print output to STDOUT */
     string input;
     cout<<"Enter the input string: ";
     cin>>input;
-    bool foundDuplicate = findDuplicateBB(input);
+    //Replace function as required
+    bool foundDuplicate = findDuplicateASCII(input);
     if(foundDuplicate){
         cout<<"Duplicate found"<<endl;
     } else {
@@ -29,7 +32,7 @@ int main() {
     }
     return 0;
 }
-bool findDuplicateBB(const string& input){
+bool findDuplicateBF(const string& input){
     int length = input.length();
     for(int i=0;i<length-1;i++){
         for(int j=i+1;j<length;j++){
@@ -38,6 +41,19 @@ bool findDuplicateBB(const string& input){
                 return true;
             }
         }
+    }
+    return false;
+}
+
+bool findDuplicateASCII(const string& input){
+    bool asciiArray[256] = {0};
+    int length = input.length();
+    for(int i=0;i<length;i++){
+        if(asciiArray[int(input[i])]){
+            return true;
+            } else {
+            asciiArray[int(input[i])]=true;
+            }
     }
     return false;
 }
