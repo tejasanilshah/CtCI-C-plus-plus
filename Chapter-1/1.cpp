@@ -7,6 +7,7 @@ Variant: What if you cannot use additional data structures?
 Good questions to ask: What is the range of input characters? Depending on the input, the answer gets narrower or broader.
 If it is ASCII then 128 characters, extended ASCII 256
 You will simply initialize a boolean array of the same size and set the value to true the first time you encounter a character.
+-----
 */
 #include <cmath>
 #include <cstdio>
