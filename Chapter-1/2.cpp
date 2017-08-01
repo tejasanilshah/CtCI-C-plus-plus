@@ -45,4 +45,5 @@ int main() {
 /*
 Missing things | Optimizations: 
 Think about character cases, or whitespaces
+ASCII and Unicode have different character codes for upper and lower case of letters, and whitespace too. So this wouldn't matter
 */
