@@ -1,3 +1,12 @@
+/*
+Cracking the Coding Interview
+Question *.*:
+-----
+Variants:
+-----
+Hints:
+-----
+*/
 #include <cmath>
 #include <cstdio>
 #include <vector>
