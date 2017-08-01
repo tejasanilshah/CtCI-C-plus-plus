@@ -23,6 +23,10 @@ int main() {
     int characterCount[255] = {0};
     int lenA = inputA.length();
     int lenB = inputB.length();
+    if(lenA!=lenB){
+        cout<<"The strings aren't permutations"<<endl;
+        return 0;
+    }
     for(int i=0;i<lenA;i++){
         characterCount[int(inputA[i])]++;
     }
@@ -41,5 +45,4 @@ int main() {
 /*
 Missing things | Optimizations: 
 Think about character cases, or whitespaces
-Could've optimized by checking length of both the strings
 */
