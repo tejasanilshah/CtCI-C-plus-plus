@@ -45,3 +45,9 @@ bool canBePalindrome(const string& input){
     }
     return true;
 }
+/*
+PS: There is a more elegant and optimal solution to doing this. Use a bit vector instead of an int array to keep counts of the characters.
+Everytime you encounter a character toggle the bit, that will essentially keep a track of even or odd. It the bit is one, that means there have been odd occurances,
+and a zero means that there have been even occurances.
+After going through the entire string check whther there is either exactly one bit set to 1, or no bits set to one.
+*/
