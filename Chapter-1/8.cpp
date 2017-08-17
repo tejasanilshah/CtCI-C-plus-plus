@@ -61,3 +61,23 @@ int main() {
     }
     return 0;
 }
+/*
+The optimal solution involves having only two variables to track whether the first row and column have a zero or not.
+The while traversing the matrix to find zeros, you propagate the zero to first row and column.
+So from 
+   35    0    6   26   19   24
+    3   32    0   21   23   25
+   31    9    2   22   27   20
+    8   28   33   17   0   15
+   30    5   34   12   0   16
+    4   36   29   13   0   11
+You go to something like
+   35    0    0   26   0   24
+    3   32    0   21   23   25
+   31    9    2   22   27   20
+    0   28   33   17   0   15
+    0    5   34   12   0   16
+    0   36   29   13   0   11
+Notice that the zeros have propagated to the first row and column.
+Now again you go through the first row and column and set the required row or column to zero depending on whether you encounter a zero or not.
+*/
