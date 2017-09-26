@@ -57,7 +57,6 @@ bool isUnique_bruteforce(const string &input)
         {
             if (input[i] == input[j])
             {
-                cout << input[i] << " " << input[j] << endl;
                 return false;
             }
         }
@@ -71,13 +70,14 @@ bool isUnique_booleanArray(const string &input)
     int length = input.length();
     for (int i = 0; i < length; i++)
     {
-        if (booleanArray[int(input[i])])
+        int value = int(input[i]);
+        if (booleanArray[value])
         {
             return false;
         }
         else
         {
-            booleanArray[int(input[i])] = true;
+            booleanArray[value] = true;
         }
     }
     return true;
@@ -88,14 +88,14 @@ bool isUnique_bitVector(const string &input)
     bitset<maxCharacters> bits(0);
     for (int i = 0; i < input.length(); i++)
     {
-        int intValue = input[i];
-        if (bits.test(intValue))
+        int value = input[i];
+        if (bits.test(value))
         {
             return false;
         }
         else
         {
-            bits.set(intValue);
+            bits.set(value);
         }
     }
     return true;
