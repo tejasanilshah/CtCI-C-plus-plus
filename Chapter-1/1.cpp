@@ -5,7 +5,7 @@ Question 1.1: Implement an algorithm to determine if a string has all unique cha
 -----
 Variant: What if you cannot use additional data structures?
 -----
-Good questions to ask: What is the range of input characters? Depending on the input, the answer gets narrower or broader.
+Hints/Good questions to ask: What is the range of input characters? Depending on the input, the answer gets narrower or broader.
 If it is ASCII then 128 characters, extended ASCII 256
 You will simply initialize a boolean array of the same size and set the value to true the first time you encounter a character.
 A good optimization is to compare the length of the input to the maximum unique characters in the character set. 

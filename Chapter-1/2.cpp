@@ -5,7 +5,7 @@ Question 1.2: Given two strings find if they are a permutation of the other
 -----
 Variants: 
 -----
-Hints: Ask for what a permutation means, don't assume something
+Hints/Good questions to ask: Ask for what a permutation means, don't assume something
 A sort could work but it'd be of O(nlog(n)), if you were allowed some space you could do it in O(n)
 Ask about character range, that would help with narrowing down the possiblilities (Unicode or ASCII)
 Ask about character cases, whitespaces etc. If character case doesn't matter then first convert your input to lowercase. 
