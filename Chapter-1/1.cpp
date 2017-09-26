@@ -1,5 +1,6 @@
 /*
 Cracking the Coding Interview
+Is Unique:
 Question 1.1: Implement an algorithm to determine if a string has all unique characters.
 -----
 Variant: What if you cannot use additional data structures?

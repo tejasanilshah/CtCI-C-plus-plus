@@ -1,5 +1,6 @@
 /*
 Cracking the Coding Interview
+Check Permutation
 Question 1.2: Given two strings find if they are a permutation of the other
 -----
 Variants: 
