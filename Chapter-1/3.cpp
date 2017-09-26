@@ -4,28 +4,42 @@ Question 1.3: URLify a string.
 -----
 Variants:
 -----
-Hints:
+Hints/Good questions to ask: Does it have to be in place? 
+If it doesn't need to happen in place, then it is pretty straight-forward.
+Simply iterate over the string copying character by character and when you encounter a " " insert a "%20" instead.
+With C++ because of a powerful standard library you can cheat a little by using the erase and insert functionality of the string library.
+That kind of makes the question moot. So you should assume it is a question of arrays, and you've to move things around manually.
+//TODO: Do it the char array way
 -----
 */
-#include <cmath>
-#include <cstdio>
-#include <vector>
 #include <iostream>
-#include <algorithm>
 #include <string>
-int MAX_SIZE = 100;
 using namespace std;
-int main() {
-    char input[MAX_SIZE];
-    int trueLength;
-    cout<<"Input the string to URLify and true length:"<<endl;
-    cin>>input;
-    cout<<"Input the true length: "<<endl;
-    cin>>trueLength;
-    // for(int i=trueLength-1;i>=0;i++){
-    //     cout<<input[i]<<endl;
-    // }
+const string URLifiedSpace = "%20";
+string URLify_STL(string input);
+int main()
+{
+    string input;
+    cout << "Input the string you want to URLify: ";
+    getline(cin, input);
+    //STL Method
+    input = URLify_STL(input);
+    cout << "The URLified string is: " << input << endl;
     return 0;
+}
+string URLify_STL(string input){
+    int i = 0;
+    while (i != input.size())
+    {
+        if (input[i] == ' ')
+        {
+            input.erase(i,1);
+            input.insert(i, URLifiedSpace);
+            i += 2;
+        }
+        i++;
+    }
+    return input;
 }
 /*
 Solution outline
