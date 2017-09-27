@@ -19,14 +19,44 @@ const string URLifiedSpace = "%20";
 string URLify_STL(string input);
 int main()
 {
-    string input;
+    // string input;
+    // cout << "Input the string you want to URLify: ";
+    // getline(cin, input);
+    // //STL Method
+    // input = URLify_STL(input);
+    // cout << "The URLified string is: " << input << endl;
+    /*
+    //Char Array method
+    char array[255];
     cout << "Input the string you want to URLify: ";
-    getline(cin, input);
-    //STL Method
-    input = URLify_STL(input);
-    cout << "The URLified string is: " << input << endl;
-    return 0;
+    int textSize=0;
+    while (!cin.eof()) {
+        cin >> noskipws >> array[textSize];
+        textSize++;
+    }
+    cout<<endl<<endl;
+    cout<<textSize<<endl;
+    cout<<"The contents are: ";
+    for(int j=0;j<textSize;j++){
+        cout<<array[j];
+    }
+    */
+    // char array[3];
+    // int textSize = 0;
+    // while (!cin.eof()) {
+    //     cin >> array[textSize];
+    //     textSize++;
+    // }
+
+    // for(int i = 0; i < textSize; i++) {
+    //     cout << array[i];
+    // }
+    // cout<<endl<<array[5];
+    // return 0;
 }
+
+
+
 string URLify_STL(string input){
     int i = 0;
     while (i != input.size())
